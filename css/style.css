@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
 
 :root{
-  --primary-color: #c98d83;
-  --secondary: #783b31;
-  --bg: #f2f1ec;
-  --black: #000;
-  --white: #fff;
+  --primary-color: #e67e22; /* Warm orange */
+  --secondary: #c0392b;    /* Deep red */
+  --bg: #fdfcfb;           /* Off-white */
+  --black: #2c3e50;        /* Dark blue-grey */
+  --white: #ffffff;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 *{
-  font-family: 'Vidaloka', sans-serif;
+  font-family: 'Vidaloka', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: .2s linear;
 }
 
@@ -56,7 +55,6 @@ section{
 
 .heading span{
   color: var(--secondary);
-  text-transform: uppercase;
 }
 
 .btn{
@@ -75,7 +73,7 @@ section{
   background: var(--secondary);
 }
 
-/* header */
+/* Header */
 .header{
   position: fixed;
   top: 0;
@@ -126,7 +124,7 @@ section{
   display: none;
 }
 
-/* shopping */
+/* Shopping Cart */
 
 .cart-items-container{
   position: fixed;
@@ -175,7 +173,7 @@ section{
   margin: 1rem 0;
   display: flex;
   align-items: center;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 .cart-items-container .cart-item .fa-times{
@@ -199,7 +197,6 @@ section{
   font-size: 2rem;
   color: var(--black);
   padding-bottom: .5rem;
-
 }
 
 .cart-items-container .cart-item .content .price{
@@ -208,9 +205,7 @@ section{
   text-align: left;
 }
 
-/* shopping end */
-
-/* home */
+/* Home */
 
 @keyframes fadeIn{
   0%{
@@ -288,9 +283,7 @@ section{
 
 }
 
-/* home end */
-
-/* banner */
+/* Banner */
 
 .banner{
   background: url(/css/images/banner-bg.jpg);
@@ -304,9 +297,7 @@ section{
   width: 100%;
 }
 
-/* banner end */
-
-/* about */
+/* About */
 
 .about .row{
   display: flex;
@@ -315,11 +306,11 @@ section{
   gap: 2rem;
 }
 
-.about .row image{
+.about .row .image{
   flex: 1 1 40rem;
 }
 
-.about .row image img{
+.about .row .image img{
   width: 100%;
   height: 100%;
 }
@@ -344,9 +335,8 @@ section{
   padding: 1rem 0;
   line-height: 2;
 }
-/* about ends */
 
-/* product */
+/* Products */
 
 .product{
   background: var(--bg);
@@ -405,9 +395,8 @@ section{
   color: var(--secondary);
   margin-right: 1rem;
 }
-/* product ends */
 
-/* gallery */
+/* Gallery */
 
 .gallery .gallery-container{
   display: grid;
@@ -453,9 +442,9 @@ section{
   display: flex;
 
 }
-/* gallery ends */
 
-/* weekly promotion */
+/* Promotions */
+
 .promotion{
   background: url(/css/images/promotion.jpg) no-repeat;
   background-size: cover !important;
@@ -492,10 +481,7 @@ section{
   line-height: 1.8;
 }
 
-
-/* weekly promotion ends */
-
-/* team */
+/* Team */
 
 .team .box-container{
   display: grid;
@@ -567,9 +553,7 @@ section{
   cursor: pointer;
 }
 
-/* team ends*/
-
-/* parallax */
+/* Parallax */
 
 .parallax{
   background: url(/css/images/parallax.jpg) no-repeat;
@@ -630,9 +614,8 @@ section{
   line-height: 1.8;
 }
 
-/* parallax ends*/
+/* Reviews */
 
-/* review */
 .review{
   background: var(--bg);
 }
@@ -677,9 +660,8 @@ section{
   padding-top: 1rem;
 }
 
-/* review ends */
+/* Order */
 
-/* order */
 .order .row{
   display: flex;
   flex-wrap: wrap;
@@ -695,7 +677,6 @@ section{
   width: 100%;
   object-fit: cover;
 }
-
 
 .order .row form{
   flex: 1 1 50rem;
@@ -713,8 +694,7 @@ section{
   padding: 1rem;
   margin: 1rem 0;
   font-size: 1.7rem;
-  color: var(--secondary);
-  text-transform: capitalize;
+  color: var(--black);
   background: var(--bg);
   border-radius: .5rem;
   width: 49%;
@@ -730,9 +710,9 @@ section{
   resize: none;
   height: 15rem;
 }
-/* order ends */
 
-/* footer */
+/* Footer */
+
 .footer{
   background: var(--bg);
   text-align: center;
@@ -740,7 +720,7 @@ section{
 
 .footer .box-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit), minmax(25rem, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
 }
 
@@ -766,7 +746,7 @@ section{
   height: 4.5rem;
   width: 4.5rem;
   line-height: 4.5rem;
-  border-radius: 10%;
+  border-radius: 50%;
   font-size: 1.7rem;
   background: var(--primary-color);
   color: var(--white);
@@ -803,9 +783,8 @@ section{
 .footer .credit span{
   color: var(--secondary);
 }
-/* footer ends */
 
-/* mediq queries */
+/* Media Queries */
 
 @media (max-width: 991px) {
 
@@ -863,7 +842,7 @@ section{
 @media (max-width: 450px) {
 
   html{
-    font-size: 50;
+    font-size: 50%;
   }
 
   .home .slide .content h3{
